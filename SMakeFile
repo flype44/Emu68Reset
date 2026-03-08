@@ -1,0 +1,18 @@
+#################################################
+#
+# SAS/C Makefile for "Emu68Reset"
+# for AmigaOS M68K SAS/C 6.59 Compiler
+# 
+#################################################
+
+OUTFILE=Emu68Reset
+
+OBJECTS=Emu68Reset.o AsmFuncs.o 
+
+all: $(OUTFILE)
+
+clean:
+	@delete $(OBJECTS)
+
+$(OUTFILE): $(OBJECTS)
+	sc math=standard NOICONS link $(OBJECTS)

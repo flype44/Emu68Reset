@@ -1,0 +1,6 @@
+FROM LIB:c.o "Emu68Reset.o"+"AsmFuncs.o"
+TO "Emu68Reset"
+LIB LIB:scm.lib
+    LIB:sc.lib LIB:amiga.lib
+NOICONS
+
